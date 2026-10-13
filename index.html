@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <title>тудым сюдым — путешествуй по-своему</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home" aria-label="Rebel Rover — главная"><span class="logo-mark">✳</span>тудым<span>сюдым</span></a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav">
+      <a class="active" href="#home">главная</a><a href="#destinations">направления</a><a href="#about">о нас</a><a href="#journal">журнал</a>
+    </nav>
+    <a class="header-cta" href="#search">найти путешествие <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Горное озеро и величественные горы"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <div class="eyebrow light"><span class="eyebrow-dot"></span>НАШ МИР БОЛЬШЕ ЧЕМ СКИБИДИ МИР</div>
+        <h1>найди свой<br><em>дикий</em> маршрут</h1>
+        <p>меньше планов больше историй открывай места которые останутся с тобой навсегда в отличие от денег</p>
+        <a class="button button-lime" href="#destinations">исследовать места <span>↗</span></a>
+      </div>
+      <div class="hero-note"><span>01 / 04</span><span class="note-line"></span><span>горы зовут мага</span></div>
+      <div class="hero-stamp"><span>иди</span><span>ато</span><span>остановишься ↗</span></div>
+    </section>
+
+    <section class="search-section" id="search">
+      <form class="search-panel" id="trip-search">
+        <label class="search-field"><span class="field-icon">⌖</span><span><small>КУДА</small><input id="destination-input" type="text" placeholder="Выбери направление" autocomplete="off"></span></label>
+        <label class="search-field"><span class="field-icon">▦</span><span><small>КОГДА</small><select id="season-input"><option value="all">любой сезон</option><option value="Лето">лето</option><option value="Осень">осень</option><option value="Зима">зима</option><option value="Весна">весна</option></select></span></label>
+        <label class="search-field"><span class="field-icon">♧</span><span><small>НАСТРОЕНИЕ</small><select id="type-input"><option value="all">любой отдых</option><option value="Природа">природа</option><option value="Приключения">приключения</option><option value="Культура">культура</option></select></span></label>
+        <button class="button button-dark" type="submit">найти поездку <span>↗</span></button>
+      </form>
+    </section>
+
+    <section class="destinations section-wrap" id="destinations">
+      <div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> ВЫБРАНО ДЛЯ ТЕБЯ</div><h2>места которые<br><em>больше домой манят</em></h2></div><a class="text-link" href="#destinations">все направления <span>↗</span></a></div>
+      <div class="filters" aria-label="Фильтр направлений"><button class="filter active" data-filter="all">Все места <span>06</span></button><button class="filter" data-filter="Природа">природа</button><button class="filter" data-filter="Приключения">приключения</button><button class="filter" data-filter="Культура">культура</button></div>
+      <div class="destination-grid" id="destination-grid">
+        <article class="destination-card large" data-name="Доломитовые Альпы" data-season="лето" data-type="приключения" data-location="Италия">
+          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85" alt="Горный пейзаж" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=85'">
+          <span class="card-tag">ГОРЫ · ПРИКЛЮЧЕНИЯ</span><button class="save-btn" aria-label="сохранить направление" aria-pressed="false">♡</button><div class="card-bottom"><div><p>Италия</p><h3>Доломитовые Альпы</h3></div><span class="round-arrow">↗</span></div>
+        </article>
+        <article class="destination-card" data-name="Побережье Амальфи" data-season="лето" data-type="Культура" data-location="Италия">
+          <img src="https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=900&q=85" alt="Яркие домики на средиземноморском побережье" loading="lazy">
+          <span class="card-tag">ПОБЕРЕЖЬЕ · КУЛЬТУРА</span><button class="save-btn" aria-label="сохранить направление" aria-pressed="false">♡</button><div class="card-bottom"><div><p>Италия</p><h3>Побережье Амальфи</h3></div><span class="round-arrow">↗</span></div>
+        </article>
+        <article class="destination-card" data-name="Лесные тропы" data-season="осень" data-type="Природа" data-location="Словения">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=85" alt="Солнечный лес и тропинка" loading="lazy">
+          <span class="card-tag">ЛЕС · ПРИРОДА</span><button class="save-btn" aria-label="сохранить направление" aria-pressed="false">♡</button><div class="card-bottom"><div><p>Словения</p><h3>Лесные тропы</h3></div><span class="round-arrow">↗</span></div>
+        </article>
+        <article class="destination-card" data-name="Пустыня Агafay" data-season="зима" data-type="приключения" data-location="Марокко">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?auto=format&fit=crop&w=900&q=85" alt="Золотые песчаные дюны" loading="lazy">
+          <span class="card-tag">ПУСТЫНЯ · ПРИКЛЮЧЕНИЯ</span><button class="save-btn" aria-label="сохранить направление" aria-pressed="false">♡</button><div class="card-bottom"><div><p>Марокко</p><h3>Пустынные горизонты</h3></div><span class="round-arrow">↗</span></div>
+        </article>
+        <article class="destination-card" data-name="Озеро Блед" data-season="весна" data-type="природа" data-location="Словения">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=85" alt="природный пейзаж у озера" loading="lazy">
+          <span class="card-tag">ОЗЕРО · ПРИРОДА</span><button class="save-btn" aria-label="Сохранить направление" aria-pressed="false">♡</button><div class="card-bottom"><div><p>Словения</p><h3>Озеро Блед</h3></div><span class="round-arrow">↗</span></div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>ничего не найдено попробуй изменить параметры поиска</p>
+    </section>
+
+    <section class="manifesto" id="about"><div class="manifesto-image"></div><div class="manifesto-content"><div class="eyebrow light"><span class="eyebrow-dot"></span> наша философия такова</div><h2>толпою гасят даже льва<br>но не в этом суть поверьте<br><em>толпою гасят только черти</em></h2><p>мы верим что лучшие воспоминания начинаются там где заканчивается привычный маршрут собирай рюкзак выбирай направление и оставляй место неожиданному</p><a class="button button-lime" href="#journal">Наша история <span>↗</span></a></div><div class="manifesto-number">R / R</div></section>
+
+    <section class="journal section-wrap" id="journal"><div class="section-heading"><div><div class="eyebrow"><span class="eyebrow-dot"></span> ЗАМЕТКИ С ДОРОГИ</div><h2>Истории для<br><em>следующего шага</em></h2></div><p class="journal-intro">идеи советы и небольшие напоминания о том почему стоит отправиться в путь</p></div><div class="journal-grid"><article class="journal-card"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80" alt="дикая природа" loading="lazy"><p>ГИД · 6 МИН ЧТЕНИЯ</p><h3>Как путешествовать налегке и не упустить главное</h3><a href="#search" class="text-link">Читать заметку ↗</a></article><article class="journal-card"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=900&q=80" alt="зеленые горы" loading="lazy"><p>ВДОХНОВЕНИЕ · 4 МИН ЧТЕНИЯ</p><h3>Пять троп ради которых стоит проснуться рано"шучу лев рано не встает"</h3><a href="#destinations" class="text-link">найти маршрут ↗</a></article></div></section>
+
+    <section class="newsletter"><div><div class="eyebrow light"><span class="eyebrow-dot"></span> ПИСЬМА ИЗ ПУТЕШЕСТВИЙ</div><h2>впечатления —<br><em>прямо в почту</em></h2></div><form id="newsletter-form" class="newsletter-form"><label for="email-input">редкие письма только вдохновение и новые маршруты</label><div class="email-row"><input type="email" id="email-input" placeholder="Твой email" required><button type="submit" aria-label="подписаться">↗</button></div><p id="newsletter-message" aria-live="polite">подписываясь ты соглашаешься получать наши новости"микрозаймы"</p></form></section>
+  </main>
+  <footer class="footer"><a class="logo" href="#home"><span class="logo-mark">✳</span> тудым<span>сюдым</span></a><p>путешествуй за пределами привычного</p><div class="footer-links"><a href="#destinations">направления</a><a href="#about">о нас</a><a href="#journal">журнал</a></div><small>© <span id="year"></span> тудым сюдым сделано для открытий</small></footer>
+</body>
+</html>
